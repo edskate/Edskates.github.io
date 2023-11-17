@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      width: 80%;
+      margin: 50px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: #fff;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="time"] {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Name</th>
+   
+      <th>Date</th>
+      <th>Month</th>
+      <th>Year</th>
+      <th>Day</th>
+      <th>Hour</th>
+      <!-- Add more table headers as needed -->
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+    <!-- Table rows will be dynamically generated here -->
+  </tbody>
+</table>
+
+<script>
+  function generateTable() {
+    var tableBody = document.getElementById("tableBody");
+
+    // Assuming the month is November 2023 for this example
+    var startDate = new Date(2023, 10, 1); // Month is zero-based (0-11)
+    var endDate = new Date(2023, 10, 30);
+
+    while (startDate <= endDate) {
+      var row = document.createElement("tr");
+
+      // Checkbox column
+      var checkboxCell = document.createElement("td");
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkboxCell.appendChild(checkbox);
+      row.appendChild(checkboxCell);
+
+      // Dummy data for Name and Email
+      row.innerHTML += "<td>Neto</td>";
+
+      // Date, Month, Year, Day, and Hour columns
+      row.innerHTML += "<td>" + startDate.toISOString().split("T")[0] + "</td>";
+      row.innerHTML += "<td>" + startDate.toLocaleString('default', { month: 'long' }) + "</td>";
+      row.innerHTML += "<td>" + startDate.getFullYear() + "</td>";
+      row.innerHTML += "<td>" + startDate.toLocaleString('default', { weekday: 'long' }) + "</td>";
+
+      // Input field for time
+      var timeCell = document.createElement("td");
+      var timeInput = document.createElement("input");
+      timeInput.type = "time";
+      timeCell.appendChild(timeInput);
+      row.appendChild(timeCell);
+
+      tableBody.appendChild(row);
+
+      startDate.setDate(startDate.getDate() + 1); // Move to the next day
+    }
+  }
+
+  generateTable();
+</script>
+
+</body>
+</html>
