@@ -46,12 +46,12 @@
     <tr>
       <th>Select</th>
       <th>Name</th>
-   
       <th>Date</th>
       <th>Month</th>
       <th>Year</th>
       <th>Day</th>
-      <th>Hour</th>
+      <th>Start Time</th>
+      <th>End Time</th>
       <!-- Add more table headers as needed -->
     </tr>
   </thead>
@@ -81,18 +81,24 @@
       // Dummy data for Name and Email
       row.innerHTML += "<td>Neto</td>";
 
-      // Date, Month, Year, Day, and Hour columns
+      // Date, Month, Year, Day, and Start/End Time columns
       row.innerHTML += "<td>" + startDate.toISOString().split("T")[0] + "</td>";
       row.innerHTML += "<td>" + startDate.toLocaleString('default', { month: 'long' }) + "</td>";
       row.innerHTML += "<td>" + startDate.getFullYear() + "</td>";
       row.innerHTML += "<td>" + startDate.toLocaleString('default', { weekday: 'long' }) + "</td>";
 
-      // Input field for time
-      var timeCell = document.createElement("td");
-      var timeInput = document.createElement("input");
-      timeInput.type = "time";
-      timeCell.appendChild(timeInput);
-      row.appendChild(timeCell);
+      // Input fields for start and end times
+      var startTimeCell = document.createElement("td");
+      var startTimeInput = document.createElement("input");
+      startTimeInput.type = "time";
+      startTimeCell.appendChild(startTimeInput);
+      row.appendChild(startTimeCell);
+
+      var endTimeCell = document.createElement("td");
+      var endTimeInput = document.createElement("input");
+      endTimeInput.type = "time";
+      endTimeCell.appendChild(endTimeInput);
+      row.appendChild(endTimeCell);
 
       tableBody.appendChild(row);
 
