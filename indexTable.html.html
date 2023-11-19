@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Payment Progress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Example Debt Payment Progress.</h1>
+    </header>
+
+    <section>
+        <h2>Debt Summary</h2>
+        <p>Total Debt: R$4200</p>
+        <button onclick="makePayment(350)">Make Payment of R$350</button>
+        <table id="paymentTable">
+            <thead>
+                <tr>
+                    <th>Payment Made</th>
+
+                    <th>Remaining Debt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        var totalDebt = 4200;
+        var paymentsMade = [1];
+
+        function makePayment(paymentAmount) {
+            paymentsMade.push(paymentAmount);
+            updateTable();
+        }
+
+        function calculateRemainingDebt() {
+            return totalDebt - paymentsMade.reduce((a, b) => a + b, 0);
+        }
+
+        function updateTable() {
+            var tableBody = document.querySelector('#paymentTable tbody');
+            var remainingDebt = calculateRemainingDebt();
+
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = '<td>$' + paymentsMade[paymentsMade.length - 1] + '</td><td>$' + remainingDebt + '</td>'; 
+            tableBody.appendChild(newRow);
+        }
+    </script>
+
+</body>
+</html>
+
