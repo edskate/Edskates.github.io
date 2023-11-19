@@ -16,3 +16,9 @@
 -  Isso permite que você faça alterações, experimente e teste sem afetar a ramificação principal (ou "master").
 -   Uma vez que a funcionalidade estiver completa e testada, ela pode ser mesclada de volta para a ramificação principal, incorporando as alterações ao código-fonte geral.
 - A ramificação é um conceito poderoso em sistemas de controle de versão, pois facilita o desenvolvimento paralelo, a colaboração e o isolamento de diferentes tarefas ou funcionalidades.
+
+## Emoji
+:bowtie: `:bowtie:` | :smile: `:smile:` | :laughing: `:laughing:` |
+|---|---|---|
+| :blush: `:blush:` | :smiley: `:smiley:` | :relaxed: `:relaxed:` |
+
