@@ -30,9 +30,9 @@
 
 
 ## Emoji 2
-:bowtie: `:bowtie:` | :smile: `:smile:` | :laughing: `:laughing:` |
+:bowtie: `:bowtie:` | :smile: `:smile:` |   |
 |---|---|---|
-| :blush: `:blush:` | :smiley: `:smiley:` | :relaxed: `:relaxed:` |
+| :blush: `:blush:` | :smiley: `:smiley:` |   |
 
 
 
