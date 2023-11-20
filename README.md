@@ -22,5 +22,11 @@
 |---|---|---|
 | :blush: `:blush:` | :smiley: `:smiley:` | :relaxed: `:relaxed:` |
 
+# Preferencias Mais usados.
+|  Tec  |  Filme   |  Animal  |  Frutas   | Vegetais     | Vegetais     |  Hobby  |  Hobby    |   Dançarino    |  Estudos      |  Links    |
+|----|-----|-----|-----|-----|-----|-----|------|-------|------|-------|      
+|   `:🤖:`   |   `:🦇:`    |   `:🐱:`   |   `:🥭:`    |  `:🧅:`   |   `:🧄:`    |   `:🎤:`   |  `:🎵:`   |    `:🕴:`      |   `:📚:`     |   `:⚓:`     |
+| Programação   |    Filme     | Animal |   Frutas |  Vegetais   | Vegetais | Atividade |  Musica |   Dança |    Estudos |  Links |
+
 
 
