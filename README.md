@@ -29,4 +29,14 @@
 | Programação   |    Filme     | Animal |   Frutas |  Vegetais   | Vegetais | Atividade |  Musica |   Dança |    Estudos |  Links |
 
 
+## Emoji 2
+:bowtie: `:bowtie:` | :smile: `:smile:` | :laughing: `:laughing:` |
+|---|---|---|
+| :blush: `:blush:` | :smiley: `:smiley:` | :relaxed: `:relaxed:` |
+
+
+
+
+
+
 
