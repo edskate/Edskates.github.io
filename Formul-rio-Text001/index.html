@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    #displayMessage {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    #displayButton {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+    #displayButton:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Display Program</h1>
+
+  <button id="displayButton" onclick="displayMessage()">Display Message</button>
+
+  <div id="displayMessage"></div>
+
+  <script>
+    function displayMessage() {
+      const displayMessage = document.getElementById('displayMessage');
+      displayMessage.textContent = 'Hello, this is a displayed message!';
+    }
+  </script>
+<a href="atributo.html">Comando.</a>
+</body>
+</html>
